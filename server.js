@@ -9,7 +9,7 @@ app.set('view engine', 'ejs')
 
 
 
-MongoClient.connect('mongodb+srv://ayoslinthen:2LwxSTuY7VajXFdz@cluster0.eocgw7z.mongodb.net/')
+MongoClient.connect(MONGODB)
     .then(client => {
         console.log('Connected to Database');
         const db = client.db('star-wars-quotes');
