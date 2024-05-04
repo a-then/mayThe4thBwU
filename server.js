@@ -7,9 +7,9 @@ const MongoClient = require('mongodb').MongoClient;
 
 app.set('view engine', 'ejs')
 
+const PORT = process.env.PORT || 3000
 
-
-MongoClient.connect(MONGODB)
+MongoClient.connect('mongodb+srv://ayoslinthen:2LwxSTuY7VajXFdz@cluster0.eocgw7z.mongodb.net/')
     .then(client => {
         console.log('Connected to Database');
         const db = client.db('star-wars-quotes');
@@ -78,7 +78,7 @@ MongoClient.connect(MONGODB)
         })
     
 
-        app.listen(3000, () => {
+        app.listen(PORT, () => {
             console.log('listening on 3000');
         })
 
