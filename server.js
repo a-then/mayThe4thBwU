@@ -5,9 +5,9 @@ const bodyParser = require('body-parser');
 const MongoClient = require('mongodb').MongoClient;
 
 
-app.set('view engine', 'ejs')
+app.set('view engine', 'ejs');
 
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 4000;
 const databaseUrl = process.env.DATABASE_URL;
 
 MongoClient.connect(databaseUrl)
@@ -16,10 +16,11 @@ MongoClient.connect(databaseUrl)
         const db = client.db('star-wars-quotes');
         const quotesCollection = db.collection('quotes');
 
-        app.use(bodyParser.urlencoded({ extended: true }))
+        app.use(bodyParser.urlencoded({ extended: true }));
 
-        app.use(express.static('public'))
-        app.use(bodyParser.json())
+        app.use(express.static('public'));
+
+        app.use(bodyParser.json());
 
         //read
         app.get('/', (req, res) => {
