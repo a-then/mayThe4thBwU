@@ -8,8 +8,9 @@ const MongoClient = require('mongodb').MongoClient;
 app.set('view engine', 'ejs')
 
 const PORT = process.env.PORT || 3000
+const databaseUrl = process.env.DATABASE_URL;
 
-MongoClient.connect('mongodb+srv://ayoslinthen:2LwxSTuY7VajXFdz@cluster0.eocgw7z.mongodb.net/')
+MongoClient.connect(databaseUrl)
     .then(client => {
         console.log('Connected to Database');
         const db = client.db('star-wars-quotes');
