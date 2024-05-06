@@ -8,6 +8,7 @@ const MongoClient = require('mongodb').MongoClient;
 app.set('view engine', 'ejs');
 
 const PORT = process.env.PORT || 10000;
+// enviroment variable created in render
 const databaseUrl = process.env.DATABASE_URL;
 
 MongoClient.connect(databaseUrl)
@@ -81,7 +82,7 @@ MongoClient.connect(databaseUrl)
     
 
         app.listen(PORT, () => {
-            console.log('listening on 3000');
+            console.log('listening on 10000');
         })
 
 
