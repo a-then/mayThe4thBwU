@@ -7,7 +7,7 @@ const MongoClient = require('mongodb').MongoClient;
 
 app.set('view engine', 'ejs');
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 10000;
 const databaseUrl = process.env.DATABASE_URL;
 
 MongoClient.connect(databaseUrl)
