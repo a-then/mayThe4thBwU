@@ -32,6 +32,8 @@ Requires Node.js v10+ to run
 - Open your browser and navigate to:
 ```localhost:3000```
 
+- Or... click here https://maythe4thbwu.onrender.com
+
 ## Contributing
 If you'd like to contribute to this project or report any issues, please visit the GitHub repository and create a pull request or issue.
 
